@@ -1,0 +1,20 @@
+<h2>Edit Landmark</h2>
+<form action="/landmarks/<%=@landmark.id%>/edit" method="post">
+  <!-- send patch request -->
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <label>Landmark Name:</label>
+  </br>
+  <input type="text" name="landmark[name]" id='name' value="<%=@landmark.name%>">
+
+  </br>
+  <label>Year Completed:</label>
+
+  </br>
+
+  <input type="text" name="landmark[year_completed]" id='year_completed' value="<%=@landmark.year_completed%>">
+  </br>
+
+  <input type="submit" value="Edit Landmark">
+
+</form>

@@ -1,13 +1,14 @@
 <h2><%= @figure.name%></h2>
 
-<table>
-  <tr>
-    <th>Titles</th>
-  </tr>
+<h2>Titles</h2>
+<%@figure.titles.each do |title|%>
+<p><%=title.name%></p>
+</br>
+<%end%>
 
-  <%@figure.titles.each do |title|%>
-  <tr>
-    <td><%=title.name%></td>
-  </tr>
-  <%end%>
-<table>
+<h2>Landmarks</h2>
+
+<%@figure.landmarks.each do |landmark|%>
+<p><%=landmark.name%></p>
+</br>
+<%end%>
